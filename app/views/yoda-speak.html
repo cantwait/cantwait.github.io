@@ -1,7 +1,7 @@
  <form class="form-inline">
  	<div class="form-group">
 	    	<input id="inputText" ng-model="messageToSend" type="text" autofocus placeholder="Write a sentence" class="form-control" required>
-	    <button type="button" ng-click="showMessage(messageToSend)" class="btn-default btn-sm">try me</button>
+	    <button type="button" ng-disabled="!messageToSend" ng-click="showMessage(messageToSend)" class="btn-default btn-sm">try me</button>
 	</div>
 </form>
 <br>
