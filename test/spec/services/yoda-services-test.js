@@ -33,14 +33,17 @@ describe('YodaFactory Service tests', function(){
 
     var returnedPromise = appFactory.getMessage('yoda says');
     var result;
+    var s;
 
-    returnedPromise.success(function(data){
+    returnedPromise.success(function(data, status){
         result = data;
+        s = status;
     });
 
     httpBackend.flush();
 
     expect(result).toEqual(expectedResponse);
+    expect(s).toEqual(200);
   });
 
 
