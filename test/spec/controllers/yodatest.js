@@ -16,7 +16,11 @@ describe('Controller: YodaCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
+  it('should initialize yodaSays scope var', function () {
     expect(scope.yodaSays.length).toBe(25);
+  });
+
+  it('should be empty yodaMessage scope var', function () {
+    expect(scope.yodaMessage.length).toBe(0);
   });
 });
